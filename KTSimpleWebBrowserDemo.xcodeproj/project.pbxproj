@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCE40F9918447CD500F284F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9818447CD500F284F0 /* UIKit.framework */; };
+		BCE40F9B18447CD500F284F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9A18447CD500F284F0 /* Foundation.framework */; };
+		BCE40F9D18447CD500F284F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9C18447CD500F284F0 /* CoreGraphics.framework */; };
+		BCE40FA318447CD500F284F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FA118447CD500F284F0 /* InfoPlist.strings */; };
+		BCE40FA518447CD500F284F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FA418447CD500F284F0 /* main.m */; };
+		BCE40FA918447CD500F284F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FA818447CD500F284F0 /* AppDelegate.m */; };
+		BCE40FAB18447CD500F284F0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FAA18447CD500F284F0 /* Default.png */; };
+		BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FAC18447CD500F284F0 /* Default@2x.png */; };
+		BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */; };
+		BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */; };
+		BCE40FB518447CD500F284F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FB418447CD500F284F0 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTSimpleWebBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE40F9818447CD500F284F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BCE40F9A18447CD500F284F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BCE40F9C18447CD500F284F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BCE40FA018447CD500F284F0 /* KTSimpleWebBrowserDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTSimpleWebBrowserDemo-Info.plist"; sourceTree = "<group>"; };
+		BCE40FA218447CD500F284F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BCE40FA418447CD500F284F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCE40FA618447CD500F284F0 /* KTSimpleWebBrowserDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KTSimpleWebBrowserDemo-Prefix.pch"; sourceTree = "<group>"; };
+		BCE40FA718447CD500F284F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BCE40FA818447CD500F284F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BCE40FAA18447CD500F284F0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BCE40FAC18447CD500F284F0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BCE40FB118447CD500F284F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BCE40FB318447CD500F284F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BCE40FB418447CD500F284F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCE40F9218447CD500F284F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE40F9918447CD500F284F0 /* UIKit.framework in Frameworks */,
+				BCE40F9B18447CD500F284F0 /* Foundation.framework in Frameworks */,
+				BCE40F9D18447CD500F284F0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCE40F8C18447CD500F284F0 = {
+			isa = PBXGroup;
+			children = (
+				BCE40F9E18447CD500F284F0 /* KTSimpleWebBrowserDemo */,
+				BCE40F9718447CD500F284F0 /* Frameworks */,
+				BCE40F9618447CD500F284F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCE40F9618447CD500F284F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCE40F9718447CD500F284F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE40F9818447CD500F284F0 /* UIKit.framework */,
+				BCE40F9A18447CD500F284F0 /* Foundation.framework */,
+				BCE40F9C18447CD500F284F0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCE40F9E18447CD500F284F0 /* KTSimpleWebBrowserDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BCE40FA718447CD500F284F0 /* AppDelegate.h */,
+				BCE40FA818447CD500F284F0 /* AppDelegate.m */,
+				BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */,
+				BCE40FB318447CD500F284F0 /* ViewController.h */,
+				BCE40FB418447CD500F284F0 /* ViewController.m */,
+				BCE40F9F18447CD500F284F0 /* Supporting Files */,
+			);
+			path = KTSimpleWebBrowserDemo;
+			sourceTree = "<group>";
+		};
+		BCE40F9F18447CD500F284F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCE40FA018447CD500F284F0 /* KTSimpleWebBrowserDemo-Info.plist */,
+				BCE40FA118447CD500F284F0 /* InfoPlist.strings */,
+				BCE40FA418447CD500F284F0 /* main.m */,
+				BCE40FA618447CD500F284F0 /* KTSimpleWebBrowserDemo-Prefix.pch */,
+				BCE40FAA18447CD500F284F0 /* Default.png */,
+				BCE40FAC18447CD500F284F0 /* Default@2x.png */,
+				BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCE40F9418447CD500F284F0 /* KTSimpleWebBrowserDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE40FB818447CD500F284F0 /* Build configuration list for PBXNativeTarget "KTSimpleWebBrowserDemo" */;
+			buildPhases = (
+				BCE40F9118447CD500F284F0 /* Sources */,
+				BCE40F9218447CD500F284F0 /* Frameworks */,
+				BCE40F9318447CD500F284F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTSimpleWebBrowserDemo;
+			productName = KTSimpleWebBrowserDemo;
+			productReference = BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCE40F8D18447CD500F284F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = pikab1;
+			};
+			buildConfigurationList = BCE40F9018447CD500F284F0 /* Build configuration list for PBXProject "KTSimpleWebBrowserDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BCE40F8C18447CD500F284F0;
+			productRefGroup = BCE40F9618447CD500F284F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCE40F9418447CD500F284F0 /* KTSimpleWebBrowserDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCE40F9318447CD500F284F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE40FA318447CD500F284F0 /* InfoPlist.strings in Resources */,
+				BCE40FAB18447CD500F284F0 /* Default.png in Resources */,
+				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
+				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
+				BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCE40F9118447CD500F284F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE40FA518447CD500F284F0 /* main.m in Sources */,
+				BCE40FA918447CD500F284F0 /* AppDelegate.m in Sources */,
+				BCE40FB518447CD500F284F0 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BCE40FA118447CD500F284F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCE40FA218447CD500F284F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCE40FB118447CD500F284F0 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCE40FB618447CD500F284F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BCE40FB718447CD500F284F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCE40FB918447CD500F284F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTSimpleWebBrowserDemo/KTSimpleWebBrowserDemo-Prefix.pch";
+				INFOPLIST_FILE = "KTSimpleWebBrowserDemo/KTSimpleWebBrowserDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BCE40FBA18447CD500F284F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KTSimpleWebBrowserDemo/KTSimpleWebBrowserDemo-Prefix.pch";
+				INFOPLIST_FILE = "KTSimpleWebBrowserDemo/KTSimpleWebBrowserDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCE40F9018447CD500F284F0 /* Build configuration list for PBXProject "KTSimpleWebBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE40FB618447CD500F284F0 /* Debug */,
+				BCE40FB718447CD500F284F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE40FB818447CD500F284F0 /* Build configuration list for PBXNativeTarget "KTSimpleWebBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE40FB918447CD500F284F0 /* Debug */,
+				BCE40FBA18447CD500F284F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCE40F8D18447CD500F284F0 /* Project object */;
+}
