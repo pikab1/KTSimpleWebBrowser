@@ -65,6 +65,11 @@
 	
 	// 画面遷移
 	[self.navigationController pushViewController:browser animated:YES];
+	
+	// モーダルで出す場合はこちら
+//	browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じる
+//	UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
+//	[self.navigationController presentViewController:navi animated:YES completion:nil];
 }
 
 @end
