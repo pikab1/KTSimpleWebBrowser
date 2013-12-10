@@ -30,24 +30,24 @@
 	
 	/* Simple Code
 	 
-	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"http://www.uni-labo.com"];
+	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"http://www.google.co.jp"];
 	 [self.navigationController pushViewController:browser animated:YES];
 	 
 	 */
 	
 	
 	// インスタンス生成
-	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"http://www.uni-labo.com"];
+	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"https://www.google.co.jp/"];
 	
-	// ツールバー
-	browser.customToolBarButtonItems = @[CustomBarButtonItemTypeBack,
-										 [NSNumber numberWithInteger:30],
-										 CustomBarButtonItemTypeForward,
-										 CustomBarButtonItemTypeFlexibleSpace,
-										 CustomBarButtonItemTypeAction];
+	// ツールバーのボタン設定
+	browser.customToolBarButtonItems = @[CustomBarButtonItemTypeBack, // 戻るボタン
+										 [NSNumber numberWithInteger:30], // 30pxのスペース
+										 CustomBarButtonItemTypeForward, // 進むボタン
+										 CustomBarButtonItemTypeFlexibleSpace, // フレキシブルスペース
+										 CustomBarButtonItemTypeAction]; // アクションボタン
 	
-	// ナビゲーションバー右上
-	browser.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop];
+	// ナビゲーションバー右上のボタン設定
+	browser.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
 	
 	// ページタイトルの自動表示
 	browser.showAutoPageTitle = YES;
