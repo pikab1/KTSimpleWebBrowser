@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */; };
+		BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */; };
+		BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */; };
 		BCE40F9918447CD500F284F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9818447CD500F284F0 /* UIKit.framework */; };
 		BCE40F9B18447CD500F284F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9A18447CD500F284F0 /* Foundation.framework */; };
 		BCE40F9D18447CD500F284F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9C18447CD500F284F0 /* CoreGraphics.framework */; };
@@ -18,9 +21,17 @@
 		BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */; };
 		BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */; };
 		BCE40FB518447CD500F284F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FB418447CD500F284F0 /* ViewController.m */; };
+		BCE40FD018447D7200F284F0 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FC518447D7200F284F0 /* TransitionManager.m */; };
+		BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FC618447D7200F284F0 /* WebPageView.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewAdditions.h; sourceTree = "<group>"; };
+		BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewAdditions.m; sourceTree = "<group>"; };
+		BC96AB101856E063000AED9E /* KTSimpleWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSimpleWebBrowser.h; sourceTree = "<group>"; };
+		BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSimpleWebBrowser.m; sourceTree = "<group>"; };
 		BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTSimpleWebBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE40F9818447CD500F284F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCE40F9A18447CD500F284F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +48,9 @@
 		BCE40FB118447CD500F284F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BCE40FB318447CD500F284F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BCE40FB418447CD500F284F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BCE40FC418447D7200F284F0 /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
+		BCE40FC518447D7200F284F0 /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
+		BCE40FC618447D7200F284F0 /* WebPageView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WebPageView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC96AB131857036D000AED9E /* Category+Util */ = {
+			isa = PBXGroup;
+			children = (
+				BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */,
+				BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */,
+				BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */,
+				BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */,
+				BCE40FC418447D7200F284F0 /* TransitionManager.h */,
+				BCE40FC518447D7200F284F0 /* TransitionManager.m */,
+			);
+			name = "Category+Util";
+			sourceTree = "<group>";
+		};
 		BCE40F8C18447CD500F284F0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,7 @@
 		BCE40F9E18447CD500F284F0 /* KTSimpleWebBrowserDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BCE40FBB18447D3800F284F0 /* KTSimpleWebBrowser */,
 				BCE40FA718447CD500F284F0 /* AppDelegate.h */,
 				BCE40FA818447CD500F284F0 /* AppDelegate.m */,
 				BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */,
@@ -105,6 +133,17 @@
 				BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCE40FBB18447D3800F284F0 /* KTSimpleWebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				BC96AB101856E063000AED9E /* KTSimpleWebBrowser.h */,
+				BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */,
+				BC96AB131857036D000AED9E /* Category+Util */,
+				BCE40FC618447D7200F284F0 /* WebPageView.bundle */,
+			);
+			name = KTSimpleWebBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +202,7 @@
 				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
 				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
 				BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */,
+				BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */,
+				BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */,
 				BCE40FA518447CD500F284F0 /* main.m in Sources */,
 				BCE40FA918447CD500F284F0 /* AppDelegate.m in Sources */,
 				BCE40FB518447CD500F284F0 /* ViewController.m in Sources */,
+				BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */,
+				BCE40FD018447D7200F284F0 /* TransitionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +342,7 @@
 				BCE40FBA18447CD500F284F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

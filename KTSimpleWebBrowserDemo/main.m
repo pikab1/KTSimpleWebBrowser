@@ -2,7 +2,6 @@
 //  main.m
 //  KTSimpleWebBrowserDemo
 //
-//  Created by UNI on 2013/11/26.
 //  Copyright (c) 2013年 pikab1. All rights reserved.
 //
 
