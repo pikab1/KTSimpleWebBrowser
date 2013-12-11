@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "KTSimpleWebBrowser.h"
+#import "SafariActivity.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,24 +47,33 @@
 										 CustomBarButtonItemTypeFixedSpace(30), // 固定長スペース(30px)
 										 CustomBarButtonItemTypeForward, // 進むボタン
 										 CustomBarButtonItemTypeFlexibleSpace, // 可変長スペース
-										 CustomBarButtonItemTypeAction]; // アクションボタン
+										 CustomBarButtonItemTypeActionInActivity]; // アクションボタン
 	
 	// ナビゲーションバー右上のボタン設定
 	browser.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
+	
+	// 自分で生成したアイテムも設定できます
+//	UIBarButtonItem *originalItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:nil];
+//	browser.customRightBarButtonItems = @[originalItem, CustomBarButtonItemTypeReloadAndStop];
 	
 	// ページタイトルの自動表示
 	browser.showAutoPageTitle = YES;
 	
 	// アクションシートのカスタマイズ
-	[browser setActionSheetDatasWithTitle:@"メニュー"
-									items:[NSArray arrayWithObjects:@"アプリAで開く", @"アプリBで開く", nil]
-					   actionSheetHandler:^(NSString *url, int index) {
-										
-										NSLog(@"url=%@, index=%d", url, index);
-										
-										[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-										
-									}];
+//	[browser setActionSheetDatasWithTitle:@"メニュー"
+//									items:[NSArray arrayWithObjects:@"アプリAで開く", @"アプリBで開く", nil]
+//					   actionSheetHandler:^(NSString *url, int index) {
+//										
+//										NSLog(@"url=%@, index=%d", url, index);
+//										
+//										[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//										
+//									}];
+	
+	// アクティビティのカスタマイズ
+//	SafariActivity *safari = [SafariActivity new];
+//	[browser setActivityObjects:[NSArray arrayWithObjects:safari, nil]];
+	
 	
 	// 画面遷移
 	[self.navigationController pushViewController:browser animated:YES];

@@ -3,6 +3,9 @@
 #import "TransitionManager.h"
 #import "UIImage+Additions.h"
 
+// open in
+#import "SafariActivity.h"
+
 typedef void (^ActionSheetHandler)(NSString *url, int index); // 表示中のURL、選択したindex値
 
 NSString *const CustomBarButtonItemTypeBack = @"CustomBarButtonItemTypeBack";
@@ -13,7 +16,8 @@ NSString *const CustomBarButtonItemTypeReloadAndIndicator = @"CustomBarButtonIte
 NSString *const CustomBarButtonItemTypeStop = @"CustomBarButtonItemTypeStop";
 NSString *const CustomBarButtonItemTypeFlexibleSpace = @"CustomBarButtonItemTypeFlexibleSpace";
 NSString *const CustomBarButtonItemTypeDone = @"CustomBarButtonItemTypeDone";
-NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction";
+NSString *const CustomBarButtonItemTypeActionInActionSheet = @"CustomBarButtonItemTypeActionInActionSheet";
+NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemTypeActionInActivity";
 
 @interface KTSimpleWebBrowser () <UIWebViewDelegate, UIActionSheetDelegate> {
 	int _loadingCount;
@@ -27,13 +31,17 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 @property (nonatomic, strong, readonly) UIBarButtonItem *stopBarButtonItem;
 @property (nonatomic, strong, readonly) UIBarButtonItem *activityBarButtonItem;
 @property (nonatomic, strong, readonly) UIBarButtonItem *doneBarButtonItem;
-@property (nonatomic, strong, readonly) UIBarButtonItem *actionBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *actionInActionSheetBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *actionInActivityBarButtonItem;
 @property (nonatomic, strong) NSMutableDictionary *requestHeaderField;
 
 // アクションシートのデータ
 @property (nonatomic, strong) NSString *actionSheetTitle;
 @property (nonatomic, strong) NSArray *actionSheetItems;
 @property (nonatomic, strong) ActionSheetHandler actionSheetHandler;
+
+// アクティビティのデータ
+@property (nonatomic, strong) NSMutableArray *applicationActivities;
 
 @end
 
@@ -49,7 +57,7 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 @synthesize navigationbarHidden;
 @synthesize toolbarHidden;
 @synthesize showAutoPageTitle;
-@synthesize backBarButtonItem, forwardBarButtonItem, refreshBarButtonItem, stopBarButtonItem, activityBarButtonItem, doneBarButtonItem, actionBarButtonItem;
+@synthesize backBarButtonItem, forwardBarButtonItem, refreshBarButtonItem, stopBarButtonItem, activityBarButtonItem, doneBarButtonItem, actionInActionSheetBarButtonItem, actionInActivityBarButtonItem;
 
 //-------------------------------------------------------------------------------//
 #pragma mark - Initialize
@@ -176,13 +184,22 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 	return doneBarButtonItem;
 }
 
-- (UIBarButtonItem *)actionBarButtonItem {
+- (UIBarButtonItem *)actionInActionSheetBarButtonItem {
 	
-	if (!actionBarButtonItem) {
-		actionBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(showActionSheet)];
+	if (!actionInActionSheetBarButtonItem) {
+		actionInActionSheetBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionInActionSheet)];
 	}
 	
-	return actionBarButtonItem;
+	return actionInActionSheetBarButtonItem;
+}
+
+- (UIBarButtonItem *)actionInActivityBarButtonItem {
+	
+	if (!actionInActivityBarButtonItem) {
+		actionInActivityBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionInActivity)];
+	}
+	
+	return actionInActivityBarButtonItem;
 }
 
 //-------------------------------------------------------------------------------//
@@ -194,6 +211,7 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
     [super viewDidLoad];
 	
 	self.requestHeaderField = [NSMutableDictionary dictionary];
+	self.applicationActivities = [NSMutableArray array];
 	
 	// 前画面の状態を保持する
 	_manager = [[TransitionManager alloc] init:self.navigationController];
@@ -257,8 +275,10 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 				[items addObject:[self createBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace action:nil]];
 			} else if (button == CustomBarButtonItemTypeDone) {
 				[items addObject:self.doneBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeAction) {
-				[items addObject:self.actionBarButtonItem];
+			} else if (button == CustomBarButtonItemTypeActionInActionSheet) {
+				[items addObject:self.actionInActionSheetBarButtonItem];
+			} else if (button == CustomBarButtonItemTypeActionInActivity) {
+				[items addObject:self.actionInActivityBarButtonItem];
 			} else {
 				NSLog(@"*************** error!! [不明なBarTypeです] ****************");
 			}
@@ -315,9 +335,10 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-// アクションシートを表示する
-- (void)showActionSheet {
+// アクションシートを表示
+- (void)actionInActionSheet {
 	
+	// アクションシート
 	_actionsSheet = [[UIActionSheet alloc] init];
 	_actionsSheet.delegate = self;
 	
@@ -338,7 +359,7 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 	
 	_actionsSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[_actionsSheet showFromBarButtonItem:self.actionBarButtonItem animated:YES];
+		[_actionsSheet showFromBarButtonItem:self.actionInActionSheetBarButtonItem animated:YES];
 	} else {
 		if (self.toolbarHidden) {
 			[_actionsSheet showInView:self.view];
@@ -346,6 +367,19 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 			[_actionsSheet showFromToolbar:self.navigationController.toolbar];
 		}
 	}
+}
+
+// アクティビティを表示
+- (void)actionInActivity {
+	NSArray *activityItems = @[wv.request.URL];
+	UIActivityViewController *activityView;
+	if ([self.applicationActivities count] == 0) {
+		SafariActivity *safari = [SafariActivity new];
+		[self.applicationActivities addObject:safari];
+	}
+	activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems
+													 applicationActivities:self.applicationActivities];
+    [self presentViewController:activityView animated:YES completion:nil];
 }
 
 //-------------------------------------------------------------------------------//
@@ -377,6 +411,10 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
 	self.actionSheetTitle = title;
 	self.actionSheetItems = items;
 	self.actionSheetHandler = block;
+}
+
+- (void)setActivityObjects:(NSArray *)applicationActivities {
+	
 }
 
 //-------------------------------------------------------------------------------//
@@ -477,9 +515,9 @@ NSString *const CustomBarButtonItemTypeAction = @"CustomBarButtonItemTypeAction"
         if (buttonIndex != actionSheet.cancelButtonIndex) {
 			
 			if (self.actionSheetHandler) {
-				self.actionSheetHandler([wv pageUrl], buttonIndex);
+				self.actionSheetHandler([wv.request.URL absoluteString], buttonIndex);
 			} else {
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[wv pageUrl]]];
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[wv.request.URL absoluteString]]];
 			}
         }
     }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC8B796D18580B3900CE073A /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B796C18580B3900CE073A /* SafariActivity.m */; };
+		BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797218581E7B00CE073A /* ico_safari@2x.png */; };
+		BC8B797718581E7B00CE073A /* ico_safari.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797318581E7B00CE073A /* ico_safari.png */; };
+		BC8B797818581E7B00CE073A /* ico_safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */; };
+		BC8B797918581E7B00CE073A /* ico_safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797518581E7B00CE073A /* ico_safari~ipad.png */; };
 		BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */; };
 		BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */; };
 		BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */; };
@@ -26,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC8B796B18580B3900CE073A /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
+		BC8B796C18580B3900CE073A /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
+		BC8B797218581E7B00CE073A /* ico_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x.png"; sourceTree = "<group>"; };
+		BC8B797318581E7B00CE073A /* ico_safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_safari.png; sourceTree = "<group>"; };
+		BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x~ipad.png"; sourceTree = "<group>"; };
+		BC8B797518581E7B00CE073A /* ico_safari~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari~ipad.png"; sourceTree = "<group>"; };
 		BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
 		BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewAdditions.h; sourceTree = "<group>"; };
@@ -67,9 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC8B796A18580AF400CE073A /* SafariActivity */ = {
+			isa = PBXGroup;
+			children = (
+				BC8B796B18580B3900CE073A /* SafariActivity.h */,
+				BC8B796C18580B3900CE073A /* SafariActivity.m */,
+				BC8B797218581E7B00CE073A /* ico_safari@2x.png */,
+				BC8B797318581E7B00CE073A /* ico_safari.png */,
+				BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */,
+				BC8B797518581E7B00CE073A /* ico_safari~ipad.png */,
+			);
+			name = SafariActivity;
+			sourceTree = "<group>";
+		};
 		BC96AB131857036D000AED9E /* Category+Util */ = {
 			isa = PBXGroup;
 			children = (
+				BC8B796A18580AF400CE073A /* SafariActivity */,
 				BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */,
 				BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */,
 				BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */,
@@ -198,10 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE40FA318447CD500F284F0 /* InfoPlist.strings in Resources */,
+				BC8B797718581E7B00CE073A /* ico_safari.png in Resources */,
 				BCE40FAB18447CD500F284F0 /* Default.png in Resources */,
 				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
 				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
+				BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */,
+				BC8B797918581E7B00CE073A /* ico_safari~ipad.png in Resources */,
 				BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */,
+				BC8B797818581E7B00CE073A /* ico_safari@2x~ipad.png in Resources */,
 				BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +245,7 @@
 				BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */,
 				BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */,
 				BCE40FA518447CD500F284F0 /* main.m in Sources */,
+				BC8B796D18580B3900CE073A /* SafariActivity.m in Sources */,
 				BCE40FA918447CD500F284F0 /* AppDelegate.m in Sources */,
 				BCE40FB518447CD500F284F0 /* ViewController.m in Sources */,
 				BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */,

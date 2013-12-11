@@ -28,7 +28,8 @@ extern NSString *const CustomBarButtonItemTypeStop;					// 中止
 extern NSString *const CustomBarButtonItemTypeFlexibleSpace;		// 可変長スペース
 #define CustomBarButtonItemTypeFixedSpace(px) [NSNumber numberWithInteger:px] // 固定長スペース
 extern NSString *const CustomBarButtonItemTypeDone;					// 閉じる
-extern NSString *const CustomBarButtonItemTypeAction;				// アクションボタン
+extern NSString *const CustomBarButtonItemTypeActionInActionSheet;	// アクションボタン（アクションシート）
+extern NSString *const CustomBarButtonItemTypeActionInActivity;		// アクションボタン（アクティビティ）
 
 @property (nonatomic, strong) NSArray *customLeftBarButtonItems;	// ナビゲーションバーの左側
 @property (nonatomic, strong) NSArray *customRightBarButtonItems;	// ナビゲーションバーの右側
@@ -50,7 +51,9 @@ extern NSString *const CustomBarButtonItemTypeAction;				// アクションボ�
 - (void)setUserAgent:(NSString *)userAgent;								// UAを設定します
 - (void)addRequestHeaderField:(NSString *)value forKey:(NSString *)key;	// リクエストヘッダを設定します
 /*
-  アクションシートのカスタマイズ
+  アクションシートの設定
+ （設定しない場合は「Safariで開く」のみ表示されます
+ 
  title:アクションシートのタイトル
  items:アクションシートのボタン
  url:ブラウザで表示しているページのURL
@@ -58,13 +61,16 @@ extern NSString *const CustomBarButtonItemTypeAction;				// アクションボ�
  */
 - (void)setActionSheetDatasWithTitle:(NSString *)title items:(NSArray *)items actionSheetHandler:(void (^)(NSString *url, int index))block;
 
+// カスタムアクティビティを設定します（設定しない場合は、URLに対応したネイティブアプリとSafariが表示されます）
+- (void)setActivityObjects:(NSArray *)applicationActivities;
 
 - (void)sendRequest __attribute__((objc_requires_super));
 - (void)back __attribute__((objc_requires_super));
 - (void)forward __attribute__((objc_requires_super));
 - (void)reload __attribute__((objc_requires_super));
 - (void)stop __attribute__((objc_requires_super));
-- (void)showActionSheet __attribute__((objc_requires_super));
+- (void)actionInActionSheet __attribute__((objc_requires_super));
+- (void)actionInActivity __attribute__((objc_requires_super));
 - (void)didFinishProcess __attribute__((objc_requires_super));
 
 // UIWebViewDelegate
