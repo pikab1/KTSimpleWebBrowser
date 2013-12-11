@@ -66,3 +66,8 @@ Options
 										[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 										
 									}];
+
+	// アクティビティのカスタマイズ
+	SafariActivity *safari = [SafariActivity new];
+	SafariActivity *safari2 = [SafariActivity new];
+	[browser setActivityObjects:[NSArray arrayWithObjects:safari, safari2, nil]];
