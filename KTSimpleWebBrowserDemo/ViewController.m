@@ -41,9 +41,9 @@
 	
 	// ツールバーのボタン設定
 	browser.customToolBarButtonItems = @[CustomBarButtonItemTypeBack, // 戻るボタン
-										 [NSNumber numberWithInteger:30], // 30pxのスペース
+										 CustomBarButtonItemTypeFixedSpace(30), // 固定長スペース(30px)
 										 CustomBarButtonItemTypeForward, // 進むボタン
-										 CustomBarButtonItemTypeFlexibleSpace, // フレキシブルスペース
+										 CustomBarButtonItemTypeFlexibleSpace, // 可変長スペース
 										 CustomBarButtonItemTypeAction]; // アクションボタン
 	
 	// ナビゲーションバー右上のボタン設定
@@ -52,7 +52,7 @@
 	// ページタイトルの自動表示
 	browser.showAutoPageTitle = YES;
 	
-	// アクションシートの設定
+	// アクションシートのカスタマイズ
 	[browser setActionSheetDatasWithTitle:@"メニュー"
 									items:[NSArray arrayWithObjects:@"アプリAで開く", @"アプリBで開く", nil]
 					   actionSheetHandler:^(NSString *url, int index) {

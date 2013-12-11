@@ -7,7 +7,7 @@
 /*
  シンプルで簡単に使えるブラウザを提供します
  
- Created by pikab1 on 1.0.0
+ Created by pikab1 on 1.0.1
  required iOS6,ARC
  
  */
@@ -26,6 +26,7 @@ extern NSString *const CustomBarButtonItemTypeReloadAndStop;		// 更新と中止
 extern NSString *const CustomBarButtonItemTypeReloadAndIndicator;	// 更新とインジケータ
 extern NSString *const CustomBarButtonItemTypeStop;					// 中止
 extern NSString *const CustomBarButtonItemTypeFlexibleSpace;		// 可変長スペース
+#define CustomBarButtonItemTypeFixedSpace(px) [NSNumber numberWithInteger:px] // 固定長スペース
 extern NSString *const CustomBarButtonItemTypeDone;					// 閉じる
 extern NSString *const CustomBarButtonItemTypeAction;				// アクションボタン
 
@@ -48,7 +49,14 @@ extern NSString *const CustomBarButtonItemTypeAction;				// アクションボ�
 - (id)initWithURLString:(NSString *)newURL;								// インスタンス生成
 - (void)setUserAgent:(NSString *)userAgent;								// UAを設定します
 - (void)addRequestHeaderField:(NSString *)value forKey:(NSString *)key;	// リクエストヘッダを設定します
-- (void)setActionSheetDatasWithTitle:(NSString *)title items:(NSArray *)items actionSheetHandler:(void (^)(NSString *url, int index))block; // アクションシートの設定
+/*
+  アクションシートのカスタマイズ
+ title:アクションシートのタイトル
+ items:アクションシートのボタン
+ url:ブラウザで表示しているページのURL
+ index:選択したアクションシートのindex値
+ */
+- (void)setActionSheetDatasWithTitle:(NSString *)title items:(NSArray *)items actionSheetHandler:(void (^)(NSString *url, int index))block;
 
 
 - (void)sendRequest __attribute__((objc_requires_super));
