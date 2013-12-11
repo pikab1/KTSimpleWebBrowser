@@ -15,10 +15,10 @@ How to use simple
 	
 	// ツールバーのボタン設定
 	browser.customToolBarButtonItems = @[CustomBarButtonItemTypeBack, // 戻るボタン
-										 [NSNumber numberWithInteger:30], // 30pxのスペース
+										 CustomBarButtonItemTypeFixedSpace(30), // 固定長スペース(30px)
 										 CustomBarButtonItemTypeForward, // 進むボタン
-										 CustomBarButtonItemTypeFlexibleSpace, // フレキシブルスペース
-										 CustomBarButtonItemTypeAction]; // アクションボタン
+										 CustomBarButtonItemTypeFlexibleSpace, // 可変長スペース
+										 CustomBarButtonItemTypeAction]; // アクションボタン（デフォルトは「Safariで開く」）
 	
 	// ナビゲーションバー右上のボタン設定
 	browser.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
@@ -26,7 +26,35 @@ How to use simple
 	// ページタイトルの自動表示
 	browser.showAutoPageTitle = YES;
 	
-	// アクションシートの設定
+	// 画面遷移
+	[self.navigationController pushViewController:browser animated:YES];
+	
+
+Options
+---------------
+
+	/* カスタムボタンの種類 */
+	CustomBarButtonItemTypeBack					// 戻る
+	CustomBarButtonItemTypeForward				// 進む
+	CustomBarButtonItemTypeReload				// 更新
+	CustomBarButtonItemTypeReloadAndStop		// 更新と中止
+	CustomBarButtonItemTypeReloadAndIndicator	// 更新とインジケータ
+	CustomBarButtonItemTypeStop					// 中止
+	CustomBarButtonItemTypeFlexibleSpace		// 可変長スペース
+	CustomBarButtonItemTypeFixedSpace			// 固定長スペース
+	CustomBarButtonItemTypeDone					// 閉じる
+	CustomBarButtonItemTypeAction				// アクションボタン
+	
+	@property BOOL navigationbarHidden;		// ナビゲーションバーを非表示にする
+	@property BOOL toolbarHidden;			// ツールバーを非表示にする
+	@property BOOL showAutoPageTitle;		// ページタイトルを自動で表示する（ナビゲーションバー必須）
+	@property BOOL isCustomButtonNoneBordered; 	// カスタムボタンの枠を非表示にするか
+
+	- (void)setUserAgent:(NSString *)userAgent;				// UAを設定します
+	- (void)addRequestHeaderField:(NSString *)value forKey:(NSString *)key;	// リクエストヘッダを設定します
+	- (void)setActionSheetDatasWithTitle:(NSString *)title items:(NSArray *)items actionSheetHandler:(void (^)(NSString *url, int index))block;
+
+    /* アクションシートのカスタマイズ */
 	[browser setActionSheetDatasWithTitle:@"メニュー"
 									items:[NSArray arrayWithObjects:@"アプリAで開く", @"アプリBで開く", nil]
 					   actionSheetHandler:^(NSString *url, int index) {
@@ -36,13 +64,3 @@ How to use simple
 										[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 										
 									}];
-	
-	// 画面遷移
-	[self.navigationController pushViewController:browser animated:YES];
-	
-
-Options
----------------
-    
-    
-
