@@ -7,7 +7,7 @@
 /*
  シンプルで簡単に使えるブラウザを提供します
  
- Created by pikab1 on 1.0.1
+ Created by pikab1 on 1.0.2
  required iOS6,ARC
  
  */
@@ -47,9 +47,17 @@ extern NSString *const CustomBarButtonItemTypeActionInActivity;		// アクショ
 @property BOOL showAutoPageTitle;	// ページタイトルを自動で表示する（ナビゲーションバー必須）
 @property BOOL isCustomButtonNoneBordered; // カスタムボタンの枠を非表示にするか
 
-- (id)initWithURLString:(NSString *)newURL;								// インスタンス生成
+/*
+ インスタンス生成
+ */
+- (id)initWithURLString:(NSString *)newURL;
+- (id)initDefaultSettingsWithURLString:(NSString *)newURL;
+- (id)initWithHTML:(NSString *)html baseURL:(NSString *)url;
+
+
 - (void)setUserAgent:(NSString *)userAgent;								// UAを設定します
 - (void)addRequestHeaderField:(NSString *)value forKey:(NSString *)key;	// リクエストヘッダを設定します
+
 /*
   アクションシートの設定
  （設定しない場合は「Safariで開く」のみ表示されます
@@ -63,6 +71,7 @@ extern NSString *const CustomBarButtonItemTypeActionInActivity;		// アクショ
 
 // カスタムアクティビティを設定します（設定しない場合は、URLに対応したネイティブアプリとSafariが表示されます）
 - (void)setActivityObjects:(NSArray *)applicationActivities;
+
 
 - (void)sendRequest __attribute__((objc_requires_super));
 - (void)back __attribute__((objc_requires_super));

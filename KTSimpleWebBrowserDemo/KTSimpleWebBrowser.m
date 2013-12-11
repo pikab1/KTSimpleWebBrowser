@@ -64,10 +64,34 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
 //-------------------------------------------------------------------------------//
 
 - (id)initWithURLString:(NSString *)newURL {
-	if (self = [super init]) {
+	if (self = [self init]) {
 		self.requestURL = newURL;
     }
     return self;
+}
+
+- (id)initWithHTML:(NSString *)html baseURL:(NSString *)url {
+	if (self = [self init]) {
+		self.requestHTML = html;
+		self.baseURL = url;
+    }
+    return self;
+}
+
+- (id)initDefaultSettingsWithURLString:(NSString *)newURL {
+	if (self = [self init]) {
+		self.requestURL = newURL;
+		[self loadDefaultSettings];
+    }
+    return self;
+}
+
+- (id)init {
+	if (self = [super init]) {
+		self.requestHeaderField = [NSMutableDictionary dictionary];
+		self.applicationActivities = [NSMutableArray array];
+	}
+	return self;
 }
 
 //-------------------------------------------------------------------------------//
@@ -209,9 +233,6 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	self.requestHeaderField = [NSMutableDictionary dictionary];
-	self.applicationActivities = [NSMutableArray array];
 	
 	// 前画面の状態を保持する
 	_manager = [[TransitionManager alloc] init:self.navigationController];
@@ -382,6 +403,17 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
     [self presentViewController:activityView animated:YES completion:nil];
 }
 
+// KTSimpleWebBrowser標準の設定を読み込みます
+- (void)loadDefaultSettings {
+	self.customToolBarButtonItems = @[CustomBarButtonItemTypeBack, // 戻るボタン
+									  CustomBarButtonItemTypeFixedSpace(30), // 固定長スペース(30px)
+									  CustomBarButtonItemTypeForward, // 進むボタン
+									  CustomBarButtonItemTypeFlexibleSpace, // 可変長スペース
+									  CustomBarButtonItemTypeActionInActivity]; // アクションボタン
+	self.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
+	self.showAutoPageTitle = YES;
+}
+
 //-------------------------------------------------------------------------------//
 #pragma mark - Public Methods
 //-------------------------------------------------------------------------------//
@@ -414,7 +446,7 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
 }
 
 - (void)setActivityObjects:(NSArray *)applicationActivities {
-	
+	self.applicationActivities = (NSMutableArray *)applicationActivities;
 }
 
 //-------------------------------------------------------------------------------//

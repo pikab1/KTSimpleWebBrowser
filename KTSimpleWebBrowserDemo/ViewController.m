@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-	[self.navigationController setNavigationBarHidden:YES animated:YES];
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,10 +31,18 @@
 
 - (IBAction)nextPage:(id)sender {
 	
-	/* Simple Code
+	/* 
+	 一番シンプルな使い方
 	 
-	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"http://www.google.co.jp"];
+	 // Pushの場合
+	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
 	 [self.navigationController pushViewController:browser animated:YES];
+	 
+	 // Modalの場合
+	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
+	 browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じるボタン
+	 UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
+	 [self.navigationController presentViewController:navi animated:YES completion:nil];
 	 
 	 */
 	
@@ -72,7 +80,8 @@
 	
 	// アクティビティのカスタマイズ
 //	SafariActivity *safari = [SafariActivity new];
-//	[browser setActivityObjects:[NSArray arrayWithObjects:safari, nil]];
+//	SafariActivity *safari2 = [SafariActivity new];
+//	[browser setActivityObjects:[NSArray arrayWithObjects:safari, safari2, nil]];
 	
 	
 	// 画面遷移
