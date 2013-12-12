@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC72EC5B1859827200966F5F /* ss1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC72EC591859827200966F5F /* ss1.png */; };
-		BC72EC5C1859827200966F5F /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC72EC5A1859827200966F5F /* ss2.png */; };
 		BC8B796D18580B3900CE073A /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B796C18580B3900CE073A /* SafariActivity.m */; };
 		BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797218581E7B00CE073A /* ico_safari@2x.png */; };
 		BC8B797718581E7B00CE073A /* ico_safari.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797318581E7B00CE073A /* ico_safari.png */; };
@@ -17,6 +15,8 @@
 		BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */; };
 		BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */; };
 		BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */; };
+		BCB0BE261859887E00482413 /* ss1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB0BE241859887E00482413 /* ss1.png */; };
+		BCB0BE271859887E00482413 /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB0BE251859887E00482413 /* ss2.png */; };
 		BCE40F9918447CD500F284F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9818447CD500F284F0 /* UIKit.framework */; };
 		BCE40F9B18447CD500F284F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9A18447CD500F284F0 /* Foundation.framework */; };
 		BCE40F9D18447CD500F284F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9C18447CD500F284F0 /* CoreGraphics.framework */; };
@@ -33,8 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC72EC591859827200966F5F /* ss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss1.png; sourceTree = "<group>"; };
-		BC72EC5A1859827200966F5F /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 		BC8B796B18580B3900CE073A /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
 		BC8B796C18580B3900CE073A /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
 		BC8B797218581E7B00CE073A /* ico_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x.png"; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewAdditions.m; sourceTree = "<group>"; };
 		BC96AB101856E063000AED9E /* KTSimpleWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSimpleWebBrowser.h; sourceTree = "<group>"; };
 		BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSimpleWebBrowser.m; sourceTree = "<group>"; };
+		BCB0BE241859887E00482413 /* ss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss1.png; sourceTree = "<group>"; };
+		BCB0BE251859887E00482413 /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 		BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTSimpleWebBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE40F9818447CD500F284F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCE40F9A18447CD500F284F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,8 +160,8 @@
 				BCE40FAA18447CD500F284F0 /* Default.png */,
 				BCE40FAC18447CD500F284F0 /* Default@2x.png */,
 				BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */,
-				BC72EC591859827200966F5F /* ss1.png */,
-				BC72EC5A1859827200966F5F /* ss2.png */,
+				BCB0BE241859887E00482413 /* ss1.png */,
+				BCB0BE251859887E00482413 /* ss2.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,12 +234,12 @@
 				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
 				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
 				BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */,
+				BCB0BE271859887E00482413 /* ss2.png in Resources */,
+				BCB0BE261859887E00482413 /* ss1.png in Resources */,
 				BC8B797918581E7B00CE073A /* ico_safari~ipad.png in Resources */,
 				BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */,
 				BC8B797818581E7B00CE073A /* ico_safari@2x~ipad.png in Resources */,
 				BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */,
-				BC72EC5B1859827200966F5F /* ss1.png in Resources */,
-				BC72EC5C1859827200966F5F /* ss2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
