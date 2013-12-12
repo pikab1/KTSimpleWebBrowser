@@ -31,6 +31,11 @@ How to use simple
 	// 画面遷移
 	[self.navigationController pushViewController:browser animated:YES];
 	
+Screen Shot
+---------------
+![alt tag](https://raw.github.com/pikab1/KTSimpleWebBrowser/master/KTSimpleWebBrowserDemo/ss1.png)
+![alt tag](https://raw.github.com/pikab1/KTSimpleWebBrowser/master/KTSimpleWebBrowserDemo/ss2.png)
+
 
 Options
 ---------------
