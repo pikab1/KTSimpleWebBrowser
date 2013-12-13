@@ -3,7 +3,6 @@ KTSimpleWebBrowser
 
 ブラウザに必要最低限の機能を簡単に実装できます  
 好きなボタンを好きな位置に配置してください、あとは勝手に管理します。  
-勝手に管理されて困る場合はオーバーライドしてご利用ください。  
 
 Required
 -----------------
@@ -76,3 +75,12 @@ Options
 	SafariActivity *safari = [SafariActivity new];
 	SafariActivity *safari2 = [SafariActivity new];
 	[browser setActivityObjects:[NSArray arrayWithObjects:safari, safari2, nil]];
+
+
+Configured on the resource file
+---------------
+	- (id)initDefaultSettingsWithURLString:(NSString *)newURL
+
+- KTWB_settings.plist  
+![alt tag](https://raw.github.com/pikab1/KTSimpleWebBrowser/master/KTSimpleWebBrowserDemo/ss3.png)
+
