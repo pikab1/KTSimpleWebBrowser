@@ -78,6 +78,7 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
     return self;
 }
 
+// カスタムボタンを設定ファイル[KTWB_settings.plist]からロードして設定します
 - (id)initDefaultSettingsWithURLString:(NSString *)newURL {
 	if (self = [self init]) {
 		self.requestURL = newURL;
@@ -406,13 +407,19 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
 // 設定ファイルを読み込みます
 - (void)loadDefaultSettings {
 	
+	// 設定ファイル読み込み
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"KTWB_settings" ofType:@"plist"];
 	NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:path];
 	NSDictionary *root = [plist objectForKey:@"CustomBarButtonSettings"];
-	self.customLeftBarButtonItems = [root objectForKey:@"CustomLeftBarButtonItems"];
-	self.customRightBarButtonItems = [root objectForKey:@"CustomRightBarButtonItems"];
-	self.customToolBarButtonItems = [root objectForKey:@"CustomToolBarButtonItems"];
-	self.showAutoPageTitle = [[root objectForKey:@"ShowAutoPageTitle"] boolValue];
+	
+	// 設定データ反映
+	self.customLeftBarButtonItems = [root objectForKey:@"customLeftBarButtonItems"];
+	self.customRightBarButtonItems = [root objectForKey:@"customRightBarButtonItems"];
+	self.customToolBarButtonItems = [root objectForKey:@"customToolBarButtonItems"];
+	self.navigationbarHidden = [[root objectForKey:@"navigationbarHidden"] boolValue];
+	self.toolbarHidden = [[root objectForKey:@"toolbarHidden"] boolValue];
+	self.showAutoPageTitle = [[root objectForKey:@"showAutoPageTitle"] boolValue];
+	self.isCustomButtonNoneBordered = [[root objectForKey:@"isCustomButtonNoneBordered"] boolValue];
 	
 }
 

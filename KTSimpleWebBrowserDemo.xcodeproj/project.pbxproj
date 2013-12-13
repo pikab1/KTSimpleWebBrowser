@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC21F44D185AECBA00E034CE /* ss3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC21F44C185AECBA00E034CE /* ss3.png */; };
 		BC85321E185A987E00EDC909 /* ico_safari.png in Resources */ = {isa = PBXBuildFile; fileRef = BC85320E185A987E00EDC909 /* ico_safari.png */; };
 		BC85321F185A987E00EDC909 /* ico_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC85320F185A987E00EDC909 /* ico_safari@2x.png */; };
 		BC853220185A987E00EDC909 /* ico_safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC853210185A987E00EDC909 /* ico_safari@2x~ipad.png */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC21F44C185AECBA00E034CE /* ss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss3.png; sourceTree = "<group>"; };
 		BC85320E185A987E00EDC909 /* ico_safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_safari.png; sourceTree = "<group>"; };
 		BC85320F185A987E00EDC909 /* ico_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x.png"; sourceTree = "<group>"; };
 		BC853210185A987E00EDC909 /* ico_safari@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x~ipad.png"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */,
 				BCB0BE241859887E00482413 /* ss1.png */,
 				BCB0BE251859887E00482413 /* ss2.png */,
+				BC21F44C185AECBA00E034CE /* ss3.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
 				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
 				BC853220185A987E00EDC909 /* ico_safari@2x~ipad.png in Resources */,
+				BC21F44D185AECBA00E034CE /* ss3.png in Resources */,
 				BCB0BE271859887E00482413 /* ss2.png in Resources */,
 				BC85321F185A987E00EDC909 /* ico_safari@2x.png in Resources */,
 				BC853232185AAD0500EDC909 /* KTWB.bundle in Resources */,

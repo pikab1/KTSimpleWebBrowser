@@ -39,7 +39,6 @@
 	
 	// 一番シンプルな使い方 Modalの場合
 	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
-	browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じるボタン
 	UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
 	[self.navigationController presentViewController:navi animated:YES completion:nil];
 	 

@@ -7,7 +7,7 @@
 /*
  シンプルで簡単に使えるブラウザを提供します
  
- Created by pikab1 on 1.0.2
+ Created by pikab1 on 1.1.0
  required iOS6,ARC
  
  */
@@ -51,8 +51,8 @@ extern NSString *const CustomBarButtonItemTypeActionInActivity;		// アクショ
  インスタンス生成
  */
 - (id)initWithURLString:(NSString *)newURL;
-- (id)initDefaultSettingsWithURLString:(NSString *)newURL;
-- (id)initWithHTML:(NSString *)html baseURL:(NSString *)url;
+- (id)initDefaultSettingsWithURLString:(NSString *)newURL; // カスタムボタンを設定ファイル[KTWB_settings.plist]からロードして設定します
+- (id)initWithHTML:(NSString *)html baseURL:(NSString *)url; // HTML文字列をロードします
 
 
 - (void)setUserAgent:(NSString *)userAgent;								// UAを設定します

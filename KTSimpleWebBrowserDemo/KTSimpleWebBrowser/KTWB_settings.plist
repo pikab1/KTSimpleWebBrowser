@@ -4,17 +4,23 @@
 <dict>
 	<key>CustomBarButtonSettings</key>
 	<dict>
-		<key>ShowAutoPageTitle</key>
+		<key>navigationbarHidden</key>
+		<false/>
+		<key>toolbarHidden</key>
+		<false/>
+		<key>showAutoPageTitle</key>
 		<true/>
-		<key>CustomLeftBarButtonItems</key>
+		<key>isCustomButtonNoneBordered</key>
+		<false/>
+		<key>customLeftBarButtonItems</key>
 		<array>
 			<string>CustomBarButtonItemTypeDone</string>
 		</array>
-		<key>CustomRightBarButtonItems</key>
+		<key>customRightBarButtonItems</key>
 		<array>
 			<string>CustomBarButtonItemTypeReloadAndStop</string>
 		</array>
-		<key>CustomToolBarButtonItems</key>
+		<key>customToolBarButtonItems</key>
 		<array>
 			<string>CustomBarButtonItemTypeBack</string>
 			<integer>30</integer>
