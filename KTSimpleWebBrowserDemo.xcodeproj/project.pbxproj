@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC8B796D18580B3900CE073A /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B796C18580B3900CE073A /* SafariActivity.m */; };
-		BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797218581E7B00CE073A /* ico_safari@2x.png */; };
-		BC8B797718581E7B00CE073A /* ico_safari.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797318581E7B00CE073A /* ico_safari.png */; };
-		BC8B797818581E7B00CE073A /* ico_safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */; };
-		BC8B797918581E7B00CE073A /* ico_safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B797518581E7B00CE073A /* ico_safari~ipad.png */; };
-		BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */; };
-		BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */; };
-		BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */; };
+		BC85321E185A987E00EDC909 /* ico_safari.png in Resources */ = {isa = PBXBuildFile; fileRef = BC85320E185A987E00EDC909 /* ico_safari.png */; };
+		BC85321F185A987E00EDC909 /* ico_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC85320F185A987E00EDC909 /* ico_safari@2x.png */; };
+		BC853220185A987E00EDC909 /* ico_safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC853210185A987E00EDC909 /* ico_safari@2x~ipad.png */; };
+		BC853221185A987E00EDC909 /* ico_safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC853211185A987E00EDC909 /* ico_safari~ipad.png */; };
+		BC853222185A987E00EDC909 /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC853213185A987E00EDC909 /* SafariActivity.m */; };
+		BC853223185A987E00EDC909 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC853215185A987E00EDC909 /* TransitionManager.m */; };
+		BC853224185A987E00EDC909 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC853217185A987E00EDC909 /* UIImage+Additions.m */; };
+		BC853225185A987E00EDC909 /* WebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC853219185A987E00EDC909 /* WebViewAdditions.m */; };
+		BC853226185A987E00EDC909 /* KTSimpleWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85321B185A987E00EDC909 /* KTSimpleWebBrowser.m */; };
+		BC853232185AAD0500EDC909 /* KTWB.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC853231185AAD0500EDC909 /* KTWB.bundle */; };
+		BC853236185AAE0C00EDC909 /* KTWB_settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC853235185AAE0C00EDC909 /* KTWB_settings.plist */; };
 		BCB0BE261859887E00482413 /* ss1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB0BE241859887E00482413 /* ss1.png */; };
 		BCB0BE271859887E00482413 /* ss2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB0BE251859887E00482413 /* ss2.png */; };
 		BCE40F9918447CD500F284F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE40F9818447CD500F284F0 /* UIKit.framework */; };
@@ -28,23 +31,25 @@
 		BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FAE18447CD500F284F0 /* Default-568h@2x.png */; };
 		BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */; };
 		BCE40FB518447CD500F284F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FB418447CD500F284F0 /* ViewController.m */; };
-		BCE40FD018447D7200F284F0 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE40FC518447D7200F284F0 /* TransitionManager.m */; };
-		BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCE40FC618447D7200F284F0 /* WebPageView.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC8B796B18580B3900CE073A /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
-		BC8B796C18580B3900CE073A /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
-		BC8B797218581E7B00CE073A /* ico_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x.png"; sourceTree = "<group>"; };
-		BC8B797318581E7B00CE073A /* ico_safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_safari.png; sourceTree = "<group>"; };
-		BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x~ipad.png"; sourceTree = "<group>"; };
-		BC8B797518581E7B00CE073A /* ico_safari~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari~ipad.png"; sourceTree = "<group>"; };
-		BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
-		BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
-		BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewAdditions.h; sourceTree = "<group>"; };
-		BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewAdditions.m; sourceTree = "<group>"; };
-		BC96AB101856E063000AED9E /* KTSimpleWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSimpleWebBrowser.h; sourceTree = "<group>"; };
-		BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSimpleWebBrowser.m; sourceTree = "<group>"; };
+		BC85320E185A987E00EDC909 /* ico_safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_safari.png; sourceTree = "<group>"; };
+		BC85320F185A987E00EDC909 /* ico_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x.png"; sourceTree = "<group>"; };
+		BC853210185A987E00EDC909 /* ico_safari@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari@2x~ipad.png"; sourceTree = "<group>"; };
+		BC853211185A987E00EDC909 /* ico_safari~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_safari~ipad.png"; sourceTree = "<group>"; };
+		BC853212185A987E00EDC909 /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
+		BC853213185A987E00EDC909 /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
+		BC853214185A987E00EDC909 /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
+		BC853215185A987E00EDC909 /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
+		BC853216185A987E00EDC909 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		BC853217185A987E00EDC909 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		BC853218185A987E00EDC909 /* WebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewAdditions.h; sourceTree = "<group>"; };
+		BC853219185A987E00EDC909 /* WebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewAdditions.m; sourceTree = "<group>"; };
+		BC85321A185A987E00EDC909 /* KTSimpleWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSimpleWebBrowser.h; sourceTree = "<group>"; };
+		BC85321B185A987E00EDC909 /* KTSimpleWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSimpleWebBrowser.m; sourceTree = "<group>"; };
+		BC853231185AAD0500EDC909 /* KTWB.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KTWB.bundle; sourceTree = "<group>"; };
+		BC853235185AAE0C00EDC909 /* KTWB_settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KTWB_settings.plist; sourceTree = "<group>"; };
 		BCB0BE241859887E00482413 /* ss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss1.png; sourceTree = "<group>"; };
 		BCB0BE251859887E00482413 /* ss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ss2.png; sourceTree = "<group>"; };
 		BCE40F9518447CD500F284F0 /* KTSimpleWebBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTSimpleWebBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,9 +68,6 @@
 		BCE40FB118447CD500F284F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BCE40FB318447CD500F284F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BCE40FB418447CD500F284F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BCE40FC418447D7200F284F0 /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
-		BCE40FC518447D7200F284F0 /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
-		BCE40FC618447D7200F284F0 /* WebPageView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WebPageView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,31 +84,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC8B796A18580AF400CE073A /* SafariActivity */ = {
+		BC85320B185A987E00EDC909 /* KTSimpleWebBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				BC8B796B18580B3900CE073A /* SafariActivity.h */,
-				BC8B796C18580B3900CE073A /* SafariActivity.m */,
-				BC8B797218581E7B00CE073A /* ico_safari@2x.png */,
-				BC8B797318581E7B00CE073A /* ico_safari.png */,
-				BC8B797418581E7B00CE073A /* ico_safari@2x~ipad.png */,
-				BC8B797518581E7B00CE073A /* ico_safari~ipad.png */,
+				BC85321A185A987E00EDC909 /* KTSimpleWebBrowser.h */,
+				BC85321B185A987E00EDC909 /* KTSimpleWebBrowser.m */,
+				BC853235185AAE0C00EDC909 /* KTWB_settings.plist */,
+				BC853231185AAD0500EDC909 /* KTWB.bundle */,
+				BC85320C185A987E00EDC909 /* Category+Util */,
 			);
-			name = SafariActivity;
+			path = KTSimpleWebBrowser;
 			sourceTree = "<group>";
 		};
-		BC96AB131857036D000AED9E /* Category+Util */ = {
+		BC85320C185A987E00EDC909 /* Category+Util */ = {
 			isa = PBXGroup;
 			children = (
-				BC8B796A18580AF400CE073A /* SafariActivity */,
-				BC96AB0D1856DFC0000AED9E /* WebViewAdditions.h */,
-				BC96AB0E1856DFC0000AED9E /* WebViewAdditions.m */,
-				BC96AB0A1856DD17000AED9E /* UIImage+Additions.h */,
-				BC96AB0B1856DD17000AED9E /* UIImage+Additions.m */,
-				BCE40FC418447D7200F284F0 /* TransitionManager.h */,
-				BCE40FC518447D7200F284F0 /* TransitionManager.m */,
+				BC85320D185A987E00EDC909 /* SafariActivity */,
+				BC853214185A987E00EDC909 /* TransitionManager.h */,
+				BC853215185A987E00EDC909 /* TransitionManager.m */,
+				BC853216185A987E00EDC909 /* UIImage+Additions.h */,
+				BC853217185A987E00EDC909 /* UIImage+Additions.m */,
+				BC853218185A987E00EDC909 /* WebViewAdditions.h */,
+				BC853219185A987E00EDC909 /* WebViewAdditions.m */,
 			);
-			name = "Category+Util";
+			path = "Category+Util";
+			sourceTree = "<group>";
+		};
+		BC85320D185A987E00EDC909 /* SafariActivity */ = {
+			isa = PBXGroup;
+			children = (
+				BC85320E185A987E00EDC909 /* ico_safari.png */,
+				BC85320F185A987E00EDC909 /* ico_safari@2x.png */,
+				BC853210185A987E00EDC909 /* ico_safari@2x~ipad.png */,
+				BC853211185A987E00EDC909 /* ico_safari~ipad.png */,
+				BC853212185A987E00EDC909 /* SafariActivity.h */,
+				BC853213185A987E00EDC909 /* SafariActivity.m */,
+			);
+			path = SafariActivity;
 			sourceTree = "<group>";
 		};
 		BCE40F8C18447CD500F284F0 = {
@@ -139,12 +153,12 @@
 		BCE40F9E18447CD500F284F0 /* KTSimpleWebBrowserDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BCE40FBB18447D3800F284F0 /* KTSimpleWebBrowser */,
 				BCE40FA718447CD500F284F0 /* AppDelegate.h */,
 				BCE40FA818447CD500F284F0 /* AppDelegate.m */,
 				BCE40FB018447CD500F284F0 /* MainStoryboard.storyboard */,
 				BCE40FB318447CD500F284F0 /* ViewController.h */,
 				BCE40FB418447CD500F284F0 /* ViewController.m */,
+				BC85320B185A987E00EDC909 /* KTSimpleWebBrowser */,
 				BCE40F9F18447CD500F284F0 /* Supporting Files */,
 			);
 			path = KTSimpleWebBrowserDemo;
@@ -164,17 +178,6 @@
 				BCB0BE251859887E00482413 /* ss2.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BCE40FBB18447D3800F284F0 /* KTSimpleWebBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				BC96AB101856E063000AED9E /* KTSimpleWebBrowser.h */,
-				BC96AB111856E063000AED9E /* KTSimpleWebBrowser.m */,
-				BC96AB131857036D000AED9E /* Category+Util */,
-				BCE40FC618447D7200F284F0 /* WebPageView.bundle */,
-			);
-			name = KTSimpleWebBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,17 +232,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE40FA318447CD500F284F0 /* InfoPlist.strings in Resources */,
-				BC8B797718581E7B00CE073A /* ico_safari.png in Resources */,
+				BC85321E185A987E00EDC909 /* ico_safari.png in Resources */,
+				BC853236185AAE0C00EDC909 /* KTWB_settings.plist in Resources */,
 				BCE40FAB18447CD500F284F0 /* Default.png in Resources */,
 				BCE40FAD18447CD500F284F0 /* Default@2x.png in Resources */,
 				BCE40FAF18447CD500F284F0 /* Default-568h@2x.png in Resources */,
-				BC8B797618581E7B00CE073A /* ico_safari@2x.png in Resources */,
+				BC853220185A987E00EDC909 /* ico_safari@2x~ipad.png in Resources */,
 				BCB0BE271859887E00482413 /* ss2.png in Resources */,
+				BC85321F185A987E00EDC909 /* ico_safari@2x.png in Resources */,
+				BC853232185AAD0500EDC909 /* KTWB.bundle in Resources */,
 				BCB0BE261859887E00482413 /* ss1.png in Resources */,
-				BC8B797918581E7B00CE073A /* ico_safari~ipad.png in Resources */,
+				BC853221185A987E00EDC909 /* ico_safari~ipad.png in Resources */,
 				BCE40FB218447CD500F284F0 /* MainStoryboard.storyboard in Resources */,
-				BC8B797818581E7B00CE073A /* ico_safari@2x~ipad.png in Resources */,
-				BCE40FD118447D7200F284F0 /* WebPageView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC96AB0F1856DFC0000AED9E /* WebViewAdditions.m in Sources */,
-				BC96AB121856E063000AED9E /* KTSimpleWebBrowser.m in Sources */,
+				BC853225185A987E00EDC909 /* WebViewAdditions.m in Sources */,
 				BCE40FA518447CD500F284F0 /* main.m in Sources */,
-				BC8B796D18580B3900CE073A /* SafariActivity.m in Sources */,
+				BC853226185A987E00EDC909 /* KTSimpleWebBrowser.m in Sources */,
+				BC853224185A987E00EDC909 /* UIImage+Additions.m in Sources */,
 				BCE40FA918447CD500F284F0 /* AppDelegate.m in Sources */,
+				BC853222185A987E00EDC909 /* SafariActivity.m in Sources */,
 				BCE40FB518447CD500F284F0 /* ViewController.m in Sources */,
-				BC96AB0C1856DD17000AED9E /* UIImage+Additions.m in Sources */,
-				BCE40FD018447D7200F284F0 /* TransitionManager.m in Sources */,
+				BC853223185A987E00EDC909 /* TransitionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

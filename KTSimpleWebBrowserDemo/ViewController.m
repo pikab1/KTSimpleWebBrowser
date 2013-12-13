@@ -31,21 +31,20 @@
 
 - (IBAction)nextPage:(id)sender {
 	
-	/* 
-	 一番シンプルな使い方
-	 
-	 // Pushの場合
-	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
-	 [self.navigationController pushViewController:browser animated:YES];
-	 
-	 // Modalの場合
-	 KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
-	 browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じるボタン
-	 UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
-	 [self.navigationController presentViewController:navi animated:YES completion:nil];
-	 
-	 */
+	// 一番シンプルな使い方 Pushの場合
+	/*
+	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
+	[self.navigationController pushViewController:browser animated:YES];
+	*/
 	
+	// 一番シンプルな使い方 Modalの場合
+	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initDefaultSettingsWithURLString:@"https://www.google.co.jp/"];
+	browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じるボタン
+	UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
+	[self.navigationController presentViewController:navi animated:YES completion:nil];
+	 
+	
+/*	カスタマイズの使い方
 	
 	// インスタンス生成
 	KTSimpleWebBrowser *browser = [[KTSimpleWebBrowser alloc] initWithURLString:@"https://www.google.co.jp/"];
@@ -60,29 +59,8 @@
 	// ナビゲーションバー右上のボタン設定
 	browser.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
 	
-	// 自分で生成したアイテムも設定できます
-//	UIBarButtonItem *originalItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:nil];
-//	browser.customRightBarButtonItems = @[originalItem, CustomBarButtonItemTypeReloadAndStop];
-	
 	// ページタイトルの自動表示
 	browser.showAutoPageTitle = YES;
-	
-	// アクションシートのカスタマイズ
-//	[browser setActionSheetDatasWithTitle:@"メニュー"
-//									items:[NSArray arrayWithObjects:@"アプリAで開く", @"アプリBで開く", nil]
-//					   actionSheetHandler:^(NSString *url, int index) {
-//										
-//										NSLog(@"url=%@, index=%d", url, index);
-//										
-//										[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-//										
-//									}];
-	
-	// アクティビティのカスタマイズ
-//	SafariActivity *safari = [SafariActivity new];
-//	SafariActivity *safari2 = [SafariActivity new];
-//	[browser setActivityObjects:[NSArray arrayWithObjects:safari, safari2, nil]];
-	
 	
 	// 画面遷移
 	[self.navigationController pushViewController:browser animated:YES];
@@ -91,6 +69,9 @@
 //	browser.customLeftBarButtonItems = @[CustomBarButtonItemTypeDone]; // 閉じる
 //	UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:browser];
 //	[self.navigationController presentViewController:navi animated:YES completion:nil];
+ 
+*/
+ 
 }
 
 @end

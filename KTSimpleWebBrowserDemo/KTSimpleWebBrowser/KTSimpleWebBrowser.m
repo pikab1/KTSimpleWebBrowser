@@ -280,28 +280,28 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
 		
 		if ([button isKindOfClass:[NSString class]]) { // NSStringはCustomBarButtonItem
 			
-			if (button == CustomBarButtonItemTypeBack) {
+			if ([button isEqualToString:CustomBarButtonItemTypeBack]) {
 				[items addObject:self.backBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeForward) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeForward]) {
 				[items addObject:self.forwardBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeReload) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeReload]) {
 				[items addObject:self.refreshBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeReloadAndStop) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeReloadAndStop]) {
 				[items addObject:_loadingCount > 0 ? self.stopBarButtonItem : self.refreshBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeReloadAndIndicator) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeReloadAndIndicator]) {
 				[items addObject:_loadingCount > 0 ? self.activityBarButtonItem : self.refreshBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeStop) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeStop]) {
 				[items addObject:self.stopBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeFlexibleSpace) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeFlexibleSpace]) {
 				[items addObject:[self createBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace action:nil]];
-			} else if (button == CustomBarButtonItemTypeDone) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeDone]) {
 				[items addObject:self.doneBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeActionInActionSheet) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeActionInActionSheet]) {
 				[items addObject:self.actionInActionSheetBarButtonItem];
-			} else if (button == CustomBarButtonItemTypeActionInActivity) {
+			} else if ([button isEqualToString:CustomBarButtonItemTypeActionInActivity]) {
 				[items addObject:self.actionInActivityBarButtonItem];
 			} else {
-				NSLog(@"*************** error!! [不明なBarTypeです] ****************");
+				NSLog(@"%@", [NSString stringWithFormat:@"*************** error!! [%@][不明なBarTypeです] ****************", button]);
 			}
 			
 		} else if ([button isKindOfClass:[UIBarButtonItem class]]) { // UIBarButtonItemはそのままアイテムとして追加する
@@ -403,15 +403,17 @@ NSString *const CustomBarButtonItemTypeActionInActivity = @"CustomBarButtonItemT
     [self presentViewController:activityView animated:YES completion:nil];
 }
 
-// KTSimpleWebBrowser標準の設定を読み込みます
+// 設定ファイルを読み込みます
 - (void)loadDefaultSettings {
-	self.customToolBarButtonItems = @[CustomBarButtonItemTypeBack, // 戻るボタン
-									  CustomBarButtonItemTypeFixedSpace(30), // 固定長スペース(30px)
-									  CustomBarButtonItemTypeForward, // 進むボタン
-									  CustomBarButtonItemTypeFlexibleSpace, // 可変長スペース
-									  CustomBarButtonItemTypeActionInActivity]; // アクションボタン
-	self.customRightBarButtonItems = @[CustomBarButtonItemTypeReloadAndStop]; // 更新／停止ボタン
-	self.showAutoPageTitle = YES;
+	
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"KTWB_settings" ofType:@"plist"];
+	NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:path];
+	NSDictionary *root = [plist objectForKey:@"CustomBarButtonSettings"];
+	self.customLeftBarButtonItems = [root objectForKey:@"CustomLeftBarButtonItems"];
+	self.customRightBarButtonItems = [root objectForKey:@"CustomRightBarButtonItems"];
+	self.customToolBarButtonItems = [root objectForKey:@"CustomToolBarButtonItems"];
+	self.showAutoPageTitle = [[root objectForKey:@"ShowAutoPageTitle"] boolValue];
+	
 }
 
 //-------------------------------------------------------------------------------//
